@@ -9,9 +9,9 @@ El algoritmo de las reinas se resuelve por partes ya que los movimientos son var
   1. Se valida que no se ataquen en la misma fila 
   2. Se valida que no se ataquen en la misma columna 
   3. Se valida que no se ataquen en cualquier diagonal, para esto se dividio en:
-    3.1 Cuadrante superior derecho 
-    3.2 Cuadrante superior izquierdo 
-    3.3 Cuadrante inferior derecho
-    3.4 Cuadrante inferior izquierdo
+    - Cuadrante superior derecho 
+    - Cuadrante superior izquierdo 
+    - Cuadrante inferior derecho
+    - Cuadrante inferior izquierdo
 
 ![Imagen de ataque de reynas](https://user-images.githubusercontent.com/10190527/229322924-e2c5a608-2c63-46b4-b7bb-da00d38e6326.png)
