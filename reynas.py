@@ -10,7 +10,7 @@ def contiene_duplicados(vector):
     
 #Funcion que determina si hay reinas atacandose de manera diagonal (superior derecha)
 def valida_superior_derecha(lst): #LISTO
-    for i in range(8):
+    for i in range(len(lst)):
         vector = []
         fila = 0
         columna = i
@@ -24,7 +24,7 @@ def valida_superior_derecha(lst): #LISTO
 
 #Funcion que determina si hay reinas atacandose de manera diagonal (superior izquierda)
 def valida_superior_izquierda(lst):
-    for i in range(8):
+    for i in range(len(lst)):
         vector = []
         fila = 7 - i
         columna = 0
@@ -38,7 +38,7 @@ def valida_superior_izquierda(lst):
 
 #Funcion que determina si hay reinas atacandose de manera diagonal (inferior derecha)    
 def valida_inferior_derecha(lst): #LISTO
-    for i in range(8):
+    for i in range(len(lst)):
         vector = []
         fila = 7
         columna = i
@@ -52,7 +52,7 @@ def valida_inferior_derecha(lst): #LISTO
 
 #Funcion que determina si hay reinas atacandose de manera diagonal (inferior izquierda)
 def valida_inferior_izquierda(lst): #LISTO
-    for i in range(8):
+    for i in range(len(lst)):
         vector = []
         fila = 0
         columna = i
@@ -63,16 +63,11 @@ def valida_inferior_izquierda(lst): #LISTO
             fila = fila + 1
         if(contiene_duplicados(vector)):
             return True
-        
+
 def evaluar_cuadrantes(reynas):
-    if (valida_superior_derecha(reynas)):
-        return True
-    if (valida_superior_izquierda(reynas)):
-        return True
-    
-    return (valida_superior_derecha(reynas) or 
-            valida_superior_izquierda(reynas) or 
-            valida_inferior_derecha(reynas) or 
+    return (valida_superior_derecha(reynas) or
+            valida_superior_izquierda(reynas) or
+            valida_inferior_derecha(reynas) or
             valida_inferior_izquierda(reynas))
 
 
@@ -122,5 +117,3 @@ reynas_paz = [
     [0,0,0,1,0,0,0,0]]
 
 print("Estan atacando" if reynas_atacando(reynas_paz) else "No estan atacando")
-
-
