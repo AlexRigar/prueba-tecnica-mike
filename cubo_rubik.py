@@ -13,7 +13,7 @@ cubo_resuelto = [
     ['W', 'W', 'W', 'W', 'W', 'W', 'W', 'W', 'W'],
     ['Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y', 'Y','Y']
 ]
-print(esta_resuelto(cubo_resuelto))
+print("Esta armado" if esta_resuelto(cubo_resuelto) else "No esta armado")
 
 
 cubo_no_resuelto = [
@@ -24,4 +24,4 @@ cubo_no_resuelto = [
     ['W', 'W', 'W', 'W', 'Y', 'W', 'W', 'W', 'W'],
     ['Y', 'Y', 'Y', 'Y', 'Y', 'W', 'Y', 'Y','Y']
 ]
-print(esta_resuelto(cubo_no_resuelto))
+print("Esta armado" if esta_resuelto(cubo_no_resuelto) else "No esta armado")
